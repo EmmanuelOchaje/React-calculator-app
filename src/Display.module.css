@@ -1,0 +1,19 @@
+.screen {
+  min-width: 24rem;
+  min-height: 5rem;
+  border: 1px solid transparent;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  background-color: rgb(240, 240, 240);
+  margin: 0.1rem;
+  margin-bottom: 0.5rem;
+  text-align: right;
+  flex: 1;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.screen:focus {
+  border: 1px solid rgb(177, 177, 177);
+  outline: rgb(177, 177, 177);
+}

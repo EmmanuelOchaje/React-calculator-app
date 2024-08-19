@@ -1,0 +1,21 @@
+.signProp {
+  padding: 0.5rem;
+  margin: 0.1rem;
+  font-size: 1.4rem;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 10px;
+  text-align: center;
+  height: 3rem;
+  width: 4rem;
+  transition: 0.3s ease-in-out all;
+}
+.signProp:hover {
+  background-color: rgb(231, 231, 231);
+}
+.sign {
+  /* width: 25%; */
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 10px;
+  /* padding-top: 0.15rem; */
+  width: auto;
+}
