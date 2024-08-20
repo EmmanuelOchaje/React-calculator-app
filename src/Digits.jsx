@@ -1,36 +1,87 @@
+/* eslint-disable no-unused-vars */
 import styles from "./Digits.module.css";
 
-const Digits = ({ value, setValue, handleClick }) => {
+const Digits = ({ value, setValue, handleClick, addValue, Clear }) => {
   return (
     <div className={styles.digits}>
       <Row>
         <Number prop="AC" />
         <Number prop="AE" />
-        <Number prop="DE" />
+        <Number prop="DE" handleClick={Clear} />
       </Row>
       <Row>
         <Number
           prop="9"
           value={value}
           setValue={setValue}
-          addValue={handleClick}
+          handleClick={addValue}
         />
-        <Number prop="8" value={value} setValue={setValue} />
-        <Number prop="7" value={value} setValue={setValue} />
+        <Number
+          handleClick={addValue}
+          prop="8"
+          value={value}
+          setValue={setValue}
+        />
+        <Number
+          handleClick={addValue}
+          prop="7"
+          value={value}
+          setValue={setValue}
+        />
       </Row>
       <Row>
-        <Number prop="6" value={value} setValue={setValue} />
-        <Number prop="5" value={value} setValue={setValue} />
-        <Number prop="4" value={value} setValue={setValue} />
+        <Number
+          prop="6"
+          handleClick={addValue}
+          value={value}
+          setValue={setValue}
+        />
+        <Number
+          prop="5"
+          handleClick={addValue}
+          value={value}
+          setValue={setValue}
+        />
+        <Number
+          prop="4"
+          handleClick={addValue}
+          value={value}
+          setValue={setValue}
+        />
       </Row>
       <Row>
-        <Number prop="3" value={value} setValue={setValue} />
-        <Number prop="2" value={value} setValue={setValue} />
-        <Number prop="1" value={value} setValue={setValue} />
+        <Number
+          prop="3"
+          handleClick={addValue}
+          // value={value}
+          // setValue={setValue}
+        />
+        <Number
+          prop="2"
+          handleClick={addValue}
+          value={value}
+          setValue={setValue}
+        />
+        <Number
+          prop="1"
+          handleClick={addValue}
+          value={value}
+          setValue={setValue}
+        />
       </Row>
       <Row>
-        <Number prop="0" value={value} setValue={setValue} />
-        <Number prop="." value={value} setValue={setValue} />
+        <Number
+          prop="0"
+          handleClick={addValue}
+          value={value}
+          setValue={setValue}
+        />
+        <Number
+          prop="."
+          handleClick={addValue}
+          value={value}
+          setValue={setValue}
+        />
         <Number prop="e" value={value} setValue={setValue} />
       </Row>
     </div>
@@ -51,7 +102,11 @@ function Row({ children }) {
 
 function Number({ prop, handleClick }) {
   return (
-    <div className={styles.numb} type="button" onClick={handleClick(prop)}>
+    <div
+      className={styles.numb}
+      type="button"
+      onClick={() => handleClick(prop)}
+    >
       {prop}
     </div>
   );

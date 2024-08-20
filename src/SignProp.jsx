@@ -1,11 +1,11 @@
 import styles from "./SignProp.module.css";
-function SignsProp({ prop }) {
+function SignsProp({ prop, handleClick }) {
   return (
     <div
       className={styles.signProp}
       value={prop}
       type="button"
-      // onClick={(e) => setValue(value + e.target.value)}
+      onClick={() => handleClick(prop)}
     >
       {prop}
     </div>
